@@ -114,6 +114,15 @@ function App() {
 
       <div>
         <h2>Completed Task</h2>
+        <ul>
+          {CompletedTaskList.map((task) => (
+            <li key={task.id}>
+              {task.title} <br />
+              Priority: {task.priority} <br />
+              EstimatedTime: {task.estimatedTime}
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );
