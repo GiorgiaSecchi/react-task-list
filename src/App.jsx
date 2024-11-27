@@ -90,6 +90,8 @@ function App() {
   // console.log(CompletedTaskList);
 
   return (
+    // <> </> = <React.Fragment>
+
     <>
       <div className="header">
         <h1>TASK MANAGER</h1>
@@ -104,7 +106,7 @@ function App() {
                 <span className="title"> {task.title} </span>
                 <button className={`btn-tag ${task.state}`}>
                   {task.state}
-                </button>{" "}
+                </button>
                 <br />
                 Priority: {task.priority} <br />
                 Estimated Time: {task.estimatedTime}
