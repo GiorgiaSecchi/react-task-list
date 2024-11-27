@@ -1,2 +1,8 @@
 /* RESET + UTILS */
 /* comuni a tutto il sito (es. body-font) */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

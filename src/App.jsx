@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  //* array originale
+  //# array originale
   const tasks = [
     {
       id: 1,
@@ -91,18 +91,20 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="header">
         <h1>TASK MANAGER</h1>
       </div>
 
       <div>
-        <h2>Current Task</h2>
+        <h2>Current Task (4)</h2>
         <ul>
           {CurrentTaskList.map((task) => (
             <li key={task.id}>
-              {task.title} <br />
-              Priority: {task.priority} <br />
-              EstimatedTime: {task.estimatedTime}
+              <div className="list">
+                {task.title} <br />
+                Priority: {task.priority} <br />
+                EstimatedTime: {task.estimatedTime}
+              </div>
             </li>
           ))}
         </ul>
@@ -113,13 +115,15 @@ function App() {
       </div>
 
       <div>
-        <h2>Completed Task</h2>
+        <h2>Completed Task (6)</h2>
         <ul>
           {CompletedTaskList.map((task) => (
             <li key={task.id}>
-              {task.title} <br />
-              Priority: {task.priority} <br />
-              EstimatedTime: {task.estimatedTime}
+              <div className="list">
+                {task.title} <br />
+                Priority: {task.priority} <br />
+                EstimatedTime: {task.estimatedTime}
+              </div>
             </li>
           ))}
         </ul>
