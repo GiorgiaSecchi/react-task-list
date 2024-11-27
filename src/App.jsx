@@ -102,7 +102,10 @@ function App() {
             <li key={task.id}>
               <div className="list">
                 <span className="title"> {task.title} </span>
-                <button className="btn-tag">tag</button> <br />
+                <button className={`btn-tag ${task.state}`}>
+                  {task.state}
+                </button>{" "}
+                <br />
                 Priority: {task.priority} <br />
                 Estimated Time: {task.estimatedTime}
               </div>
@@ -121,7 +124,11 @@ function App() {
           {CompletedTaskList.map((task) => (
             <li key={task.id}>
               <div className="list">
-                <span className="title"> {task.title} </span> <br />
+                <span className="title"> {task.title} </span>
+                <button className={`btn-tag ${task.state}`}>
+                  {task.state}
+                </button>
+                <br />
                 Priority: {task.priority} <br />
                 Estimated Time: {task.estimatedTime}
               </div>

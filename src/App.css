@@ -35,4 +35,21 @@ hr {
 
 .btn-tag {
   margin-left: 1rem;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.backlog {
+  background-color: orangered;
+}
+
+.in_progress {
+  background-color: gold;
+}
+
+.completed {
+  background-color: forestgreen;
 }
