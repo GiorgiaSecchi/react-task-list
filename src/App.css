@@ -23,3 +23,12 @@ ul {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+hr {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.title {
+  font-weight: bold;
+}
