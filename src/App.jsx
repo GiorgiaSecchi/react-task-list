@@ -78,10 +78,16 @@ function App() {
   // console.log(tasks);
 
   //* array filtrato (lista 1)
-  const filteredTasks = tasks.filter((task) => {
+  const CurrentTaskList = tasks.filter((task) => {
     return task.state === "backlog" || task.state === "in_progress";
   });
-  console.log(filteredTasks);
+  // console.log(CurrentTaskList);
+
+  //* array filtrato (lista 2)
+  const CompletedTaskList = tasks.filter((task) => {
+    return task.state === "completed";
+  });
+  // console.log(CompletedTaskList);
 
   return (
     <>
@@ -92,10 +98,22 @@ function App() {
       <div>
         <h2>Current Task</h2>
         <ul>
-          {filteredTasks.map((task) => (
-            <li key={task.id}>{task.title}</li>
+          {CurrentTaskList.map((task) => (
+            <li key={task.id}>
+              {task.title} <br />
+              Priority: {task.priority} <br />
+              EstimatedTime: {task.estimatedTime}
+            </li>
           ))}
         </ul>
+      </div>
+
+      <div>
+        <hr />
+      </div>
+
+      <div>
+        <h2>Completed Task</h2>
       </div>
     </>
   );
