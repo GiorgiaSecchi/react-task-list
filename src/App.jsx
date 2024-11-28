@@ -98,7 +98,7 @@ function App() {
       </div>
 
       <div>
-        <h2>Current Task (4)</h2>
+        <h2>Current Task ({CurrentTaskList.length})</h2>
         <ul>
           {CurrentTaskList.map((task) => (
             <li key={task.id}>
@@ -121,7 +121,7 @@ function App() {
       </div>
 
       <div>
-        <h2>Completed Task (6)</h2>
+        <h2>Completed Task ({CompletedTaskList.length})</h2>
         <ul>
           {CompletedTaskList.map((task) => (
             <li key={task.id}>
